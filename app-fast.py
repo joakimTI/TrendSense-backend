@@ -1,8 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query
-from typing import List
-import joblib
 import pandas as pd
-from pydantic import BaseModel
 import dill
 from fastapi.middleware.cors import CORSMiddleware
 from sklearn.decomposition import TruncatedSVD

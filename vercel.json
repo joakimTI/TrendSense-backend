@@ -11,5 +11,13 @@
         "src": "/(.*)",
         "dest": "app.py"
       }
-    ]
+    ],
+    "functions": {
+      "api/*.py": {
+        "includeFiles": ["products_list.pkl", "sentiments.pkl"]
+      }
+    },
+    "ignoreFiles": ["myenv/**", "*.pyc", "__pycache__/**"]
   }
+
+  
