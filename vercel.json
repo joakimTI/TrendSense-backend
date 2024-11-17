@@ -1,23 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app-fast.py",
-        "use": "@vercel/python"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app-fast.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "app.py"
-      }
-    ],
-    "functions": {
-      "api/*.py": {
-        "includeFiles": ["products_list.pkl", "sentiments.pkl"]
-      }
-    },
-    "ignoreFiles": ["myenv/**", "*.pyc", "__pycache__/**"]
-  }
-
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app-fast.py"
+    }
+  ]
+}
